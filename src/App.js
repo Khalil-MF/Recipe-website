@@ -13,13 +13,12 @@ function App() {
 
   useEffect(()=> {getRecipes()}, [query]); 
 
- 
+ // get data from 'edamam.com' API (key and id) is hidden use yours  
+  
   const getRecipes = async () => {
     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_FOOD_API_ID}&app_key=${process.env.REACT_APP_FOOD_API_KEY}`);
     const data = await response.json();
     setRecipes(data.hits);
-    console.log(data.hits);
-    
   }
 
   const getSearch = (e)=>{
