@@ -11,8 +11,7 @@ function App() {
 
   useEffect(()=> {getRecipes()}, [query]); 
 
-  // get data from API 
-
+ 
   const getRecipes = async () => {
     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${process.env.REACT_APP_FOOD_API_ID}&app_key=${process.env.REACT_APP_FOOD_API_KEY}`);
     const data = await response.json();
