@@ -9,7 +9,7 @@ function App() {
   const [query,setQuery]=useState('chicken');
  
 
-  useEffect(()=> {getRecipes()}, [query]); 
+  useEffect(()=> {getRecipes()},[query]); 
 
  
   const getRecipes = async () => {
@@ -21,7 +21,7 @@ function App() {
   const getSearch = (e)=>{
     e.preventDefault();
     setQuery(search);
-    setSearch("")
+    setSearch("");
   }
 
   return (
