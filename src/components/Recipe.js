@@ -1,31 +1,28 @@
 import React from "react";
-
+import style from './recipe.module.css';
 
 
 const Recipe = ({key,title, cuisineType, image, ingredients}) => {
 
     return (
-      <main className="card-columns">
-        <div className="card">
-          <h3 className="card-title">{title}</h3>
-          <img
+        <div className={style.recipe}>
+          <h3>{title}</h3>
+          <img 
+            className={style.image}
             src={image}
-            className="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
             alt="img"
             width="40%"
             height="25%"
           />
-          <div className="card-body">
-            <p className="card-text"> Cuisine type: {cuisineType.toUpperCase()}</p>
-          </div>
-          <ul className="list-group list-group-flush p-10 m-10">
-            <h5 className="card-title">Ingredients</h5>
+            <p > Cuisine type: {cuisineType.toUpperCase()}</p>
+          <ol >
+            <h5>Ingredients</h5>
             {ingredients.map((ingredient) => (
-              <li className="list-group-item" key={key}>{ingredient}</li>
+              <li key={key} > ➤ {ingredient}</li>
             ))}
-          </ul>
+          </ol>
         </div>
-      </main>
+      
     );
 } 
 
