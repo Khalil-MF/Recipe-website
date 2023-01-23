@@ -1,7 +1,6 @@
-# Getting Started with Create React App
-
 # Click here to see this application live [Recipe4u](http://recipe4u.epizy.com/).
 
+## Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
